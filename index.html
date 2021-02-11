@@ -20,11 +20,31 @@
 
 </head>
 
-<body class="h-screen w-full bg-gray-100 flex items-start justify-start">
+<body class="bg-gray-100 px-16 py-12">
   <div id="app">
 
     <h1 class="text-3xl font-bold mb-8">
-      Travel Hokkaido: Adventure on Japan's north island ( {{likeCheck}} )</h1>
+      Travel Hokkaido: Adventure on Japan's north island <span class="text-4xl font-bold">|</span> LIKE : ({{sumLike}})
+    </h1>
+
+    <div class="grid grid-cols-4 auto-rows-auto gap-5 ">
+      <div v-for="(task,index) in Hokkaido" class="">
+
+        <img v-bind:src="task.url" class="w-72 h-44" v-on:dblclick="likeCheck(index)">
+
+        <p class="text-center mt-4 text-xl">
+
+          <i v-if="task.Like" class="material-icons text-red-400 text-base">favorite</i>
+          <i v-else="task.Like" class="material-icons text-base">favoriteBorder</i>
+          {{task.name}}
+
+        </p>
+
+      </div>
+
+    </div>
+
+
 
   </div>
 

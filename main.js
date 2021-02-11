@@ -65,13 +65,13 @@ const app = {
     }​​
   }​​,
   methods: {
-    likeIt(index) {
-      this.thaides[index].isLike = !this.thaides[index].isLike
+    likeCheck(index) {
+      this.Hokkaido[index].Like = !this.Hokkaido[index].Like
     }
   },
   computed: {
-    countLike() {
-      return this.thaides.filter(t => t.isLike).length
+    sumLike() {
+      return this.Hokkaido.filter(t => t.Like).length
     }
   }
 }​​
