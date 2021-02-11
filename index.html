@@ -18,25 +18,30 @@
   <!-- Vue CDN -->
   <script src="https://unpkg.com/vue@next"></script>
 
+  <!--icon material design CDN-->
+  <!--https://material.io/resources/icons/?style=baseline-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body class="bg-gray-100 px-16 py-12">
   <div id="app">
 
     <h1 class="text-3xl font-bold mb-8">
-      Travel Hokkaido: Adventure on Japan's north island <span class="text-4xl font-bold">|</span> LIKE : ({{sumLike}})
+      Travel Hokkaido Gallery : Adventure on Japan's north island <span class="text-4xl font-bold">|</span> LIKE :
+      ({{ sumLike }})
     </h1>
 
-    <div class="grid grid-cols-4 auto-rows-auto gap-5 ">
-      <div v-for="(task,index) in Hokkaido" class="">
+    <div class="grid grid-cols-4 auto-rows-auto gap-15 ">
+      <div v-for="(task,index) in Hokkaido" class="mx-auto">
 
-        <img v-bind:src="task.url" class="w-72 h-44" v-on:dblclick="likeCheck(index)">
+        <img :src="task.url" class="w-72 h-44" v-on:dblclick="likeCheck(index)">
 
         <p class="text-center mt-4 text-xl">
 
           <i v-if="task.Like" class="material-icons text-red-400 text-base">favorite</i>
-          <i v-else="task.Like" class="material-icons text-base">favoriteBorder</i>
-          {{task.name}}
+          <i v-else="task.Like" class="material-icons text-base">favorite_border</i>
+          {{ task.name }}
 
         </p>
 
