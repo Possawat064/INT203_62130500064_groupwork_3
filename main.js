@@ -62,8 +62,8 @@ const app = {
           Like: false
         },
       ]
-    }​​
-  }​​,
+    }
+  },
   methods: {
     likeCheck(index) {
       this.Hokkaido[index].Like = !this.Hokkaido[index].Like
@@ -74,5 +74,6 @@ const app = {
       return this.Hokkaido.filter(t => t.Like).length
     }
   }
-}​​
-var mountedApp = Vue.createApp(app).mount('#app')
+}
+
+mountedApp = Vue.createApp(app).mount('#app')
