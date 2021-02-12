@@ -24,25 +24,20 @@
 
 </head>
 
-<body class="bg-gray-100 px-16 py-12">
+<body class="bg-blue-200 px-16 py-12">
   <div id="app">
-
-    <h1 class="text-3xl font-bold mb-8">
-      Travel Hokkaido Gallery : Adventure On Japan's North Island <span class="text-4xl font-bold">|</span> LIKE <i
-        class="material-icons text-red-400 text-3xl">favorite</i> : {{sumLike}}
+    <h1 class="flex items-center justify-center text-3xl font-bold mb-8">
+      Travel Hokkaido Gallery : Adventure On Japan's North Island <span
+        class="text-4xl font-bold text-red-400 tracking-wider">|</span>
+      LIKE <i class="material-icons text-red-400 text-3xl">favorite</i> : {{sumLike}}
     </h1>
-
-    <div class="grid grid-cols-4 auto-rows-auto gap-15 ">
+    <div class="grid grid-cols-3 auto-rows-auto gap-16 font-semibold">
       <div v-for="(task,index) in Hokkaido" class="mx-auto">
-
-        <img :src="task.url" class="w-72 h-44" v-on:dblclick="likeCheck(index)">
-
-        <p class="text-center mt-4 text-xl">
-
-          <i v-if="task.Like" class="material-icons text-red-400 text-base">favorite</i>
-          <i v-else="task.Like" class="material-icons text-base">favorite_border</i>
+        <img :src="task.url" class="w-80 h-60 rounded-md border-2 border-red-400" v-on:dblclick="likeCheck(index)">
+        <p class="text-center mt-6 text-xl tracking-wider">
+          <i v-if="task.Like" class="material-icons text-red-400 text-4xl">favorite</i>
+          <i v-else="task.Like" class="material-icons text-4xl">favorite_border</i>
           {{task.name}}
-
         </p>
       </div>
     </div>

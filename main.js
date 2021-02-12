@@ -32,7 +32,7 @@ const app = {
           Like: false
         },
         {
-          name: 'Jigokudani noboribetsu,Noboribetsu',
+          name: 'Jigokudani,Noboribetsu',
           url: './images/7.jpg',
           Like: false
         },
